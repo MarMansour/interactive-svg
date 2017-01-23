@@ -1,0 +1,54 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+.left-eye {
+  transform: translate(0%);
+  animation: nudge 3s infinite alternate;
+
+}
+
+.right-eye {
+  transform: translate(0%);
+  animation: nudge 3s infinite alternate;
+}
+
+.left-ear {
+  transform: translate(0%);
+  transition: up 500ms linear;
+
+}
+
+.right-ear {
+  transform: translate(0%);
+  transition: up 500ms linear;
+
+}
+
+.bear:hover .left-ear {
+  transform: translateY(-15%);
+}
+
+.bear:hover .right-ear {
+  transform: translateY(-15%);
+}
+
+@keyframes nudge {
+  0% {
+    transform: translate(0%);
+  }
+
+  100% {
+    transform: translate(-40%);
+
+}
